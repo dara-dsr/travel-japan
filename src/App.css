@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Belepotan";
+  src: url("fonts/Belepotan Rus.otf");
+}
+
+@font-face {
+  font-family: "FliegeMono-ExtraLight";
+  src: url("fonts/FliegeMono-ExtraLight.otf");
+}
+
+/* Общие стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #AA96FF;
+  font-family: "FliegeMono-ExtraLight";
+}
+
+h1 {
+  font-family: "Belepotan";
+}
+
+/* Заголовки */
+.title h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "Belepotan";
+  padding: 0 20px;
+}
+
+.line {
+  width: 200px;
+  height: 4px;
+  background-color: #4e1e7e;
+  margin: 0 auto 50px;
+}
+
+.header-content h1 {
+  font-size: 96px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.main-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section-header h1 {
+  font-size: 48px;
+  font-family: "Belepotan";
+  color: white;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.btn-primary {
+  background: #ffb2cc;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "FliegeMono-ExtraLight";
+}
+
+.btn-primary:hover {
+  background: #d08deb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}

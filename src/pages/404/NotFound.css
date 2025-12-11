@@ -1,0 +1,177 @@
+/* NotFound.css */
+.not-found-container {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #AA96FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: url('../../images/img/фоны/сакура.png') no-repeat center;
+}
+
+.not-found-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 800px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.not-found-title {
+  font-family: "Belepotan", sans-serif;
+  font-size: 120px;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 3px 3px 0px rgba(78, 30, 126, 0.3);
+  line-height: 1;
+}
+
+.not-found-line {
+  width: 150px;
+  height: 4px;
+  background-color: #4e1e7e;
+  margin: 20px auto 30px;
+}
+
+.not-found-subtitle {
+  font-family: "Belepotan", sans-serif;
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.not-found-text {
+  font-family: "FliegeMono-ExtraLight", monospace;
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.not-found-button {
+  display: inline-block;
+  background: #e9b2ff;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "FliegeMono-ExtraLight", monospace;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.not-found-button:hover {
+  background: #d08deb;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+.not-found-decoration {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  opacity: 0.3;
+  bottom: 10%;
+  right: 5%;
+  z-index: 1;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media screen and (max-width: 768px) {
+  .not-found-content {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .not-found-title {
+    font-size: 80px;
+  }
+
+  .not-found-subtitle {
+    font-size: 36px;
+  }
+
+  .not-found-text {
+    font-size: 18px;
+  }
+
+  .not-found-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .not-found-decoration {
+    width: 200px;
+    height: 200px;
+    bottom: 5%;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .not-found-title {
+    font-size: 60px;
+  }
+
+  .not-found-subtitle {
+    font-size: 28px;
+  }
+
+  .not-found-text {
+    font-size: 16px;
+  }
+
+  .not-found-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .not-found-decoration {
+    width: 150px;
+    height: 150px;
+    opacity: 0.2;
+  }
+}
+
+/* Планшеты */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .not-found-title {
+    font-size: 100px;
+  }
+
+  .not-found-subtitle {
+    font-size: 40px;
+  }
+
+  .not-found-decoration {
+    width: 250px;
+    height: 250px;
+  }
+}

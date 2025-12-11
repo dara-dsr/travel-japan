@@ -1,0 +1,171 @@
+.footer {
+  background-color: #4e1e7e;
+  width: 100%;
+  padding: 2% 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-top: 0%;
+  z-index: 2;
+}
+
+.footer-nav {
+  margin-left: 40px;
+  flex: 1;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10%;
+  columns: 2;
+  column-gap: 20px;
+}
+
+.footer-nav li {
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 45px;
+  white-space: nowrap;
+  font-family: "Belepotan";
+  padding: 5px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-nav a:hover {
+  color: #ff69b4;
+  transform: translateX(5px);
+}
+
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff69b4;
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.footer-center {
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-logo {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.footer-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 6px 12px rgba(255, 105, 180, 0.3));
+}
+
+.footer-title {
+  margin-top: 0;
+  font-size: 32px;
+  font-family: "Belepotan";
+  font-style: italic;
+  font-weight: 700;
+  color: #FFFCFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+.footer-copyright {
+  font-size: 18px;
+  font-family: "Belepotan";
+  font-weight: 600;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.footer-social {
+  font-family: "Belepotan";
+  margin-right: 40px;
+  text-align: right;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-social-title {
+  font-family: "Belepotan";
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFFCFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin: 15px 0 25px 0;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icons img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(255, 105, 180, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer-contact {
+  margin-top: 8px;
+  font-size: 18px;
+  font-family: "Belepotan";
+  font-weight: 600;
+  color: #FFFCFF;
+  transition: color 0.3s ease;
+}
+
+.footer-contact:hover {
+  color: #ff69b4;
+}

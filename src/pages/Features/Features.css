@@ -1,0 +1,280 @@
+.cultural-features {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  overflow-x: hidden;
+  background: url('../../images/img/фоны/сакура.png') no-repeat bottom center;
+}
+
+.cultural-header {
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.cultural-header h1 {
+  font-family: "Belepotan", sans-serif;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  letter-spacing: 2px;
+  margin: 0;
+  font-size: 48px;
+}
+
+.cultural-sections {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+  padding: 0 20px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cultural-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 40px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cultural-section:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cultural-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(210, 139, 252, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.culture::before {
+  background: rgba(136, 61, 211, 0.397);
+}
+
+.cuisine::before {
+  background: rgba(255, 107, 107, 0.301);
+}
+
+.festivals::before {
+  background: rgba(238, 118, 158, 0.288);
+}
+
+.architecture::before {
+  background: rgba(125, 245, 189, 0.288);
+}
+
+.cultural-section .card-title {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.culture .card-title {
+  color: #c363fa;
+}
+
+.cuisine .card-title {
+  color: #ff6b6b;
+}
+
+.festivals .card-title {
+  color: #ffb2cc;
+}
+
+.architecture .card-title {
+  color: #6bffba;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  margin-bottom: 25px;
+  padding-left: 35px;
+  position: relative;
+}
+
+.feature-item::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #d28bfc;
+  font-size: 24px;
+}
+
+.feature-item h3 {
+  font-family: "FliegeMono-ExtraLight", monospace;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.feature-item p {
+  font-family: "FliegeMono-ExtraLight", monospace;
+  font-size: 18px;
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.feature-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 25px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.feature-image:hover {
+  transform: scale(1.03);
+}
+
+.cultural-quote {
+  text-align: center;
+  padding: 50px;
+  margin: 60px auto;
+  max-width: 900px;
+  background: rgba(78, 30, 126, 0.15);
+  border-radius: 20px;
+  border-left: 5px solid #d28bfc;
+  border-right: 5px solid #d28bfc;
+}
+
+.cultural-quote .quote-text {
+  font-family: "FliegeMono-ExtraLight", monospace;
+  font-size: 29px;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cultural-quote .quote-author {
+  font-family: "Belepotan", sans-serif;
+  font-size: 19px;
+  color: #ffb2cc;
+}
+
+.cultural-section {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.cultural-section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.cultural-section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.cultural-section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.cultural-section:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@media screen and (max-width: 1200px) {
+  .cultural-header h1 {
+    font-size: 56px;
+  }
+
+  .cultural-sections {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cultural-sections {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+  }
+
+  .cultural-header {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+  }
+
+  .cultural-header h1 {
+    font-size: 40px;
+  }
+
+  .cultural-section .card-title {
+    font-size: 32px;
+  }
+
+  .feature-item h3 {
+    font-size: 20px;
+  }
+
+  .feature-item p {
+    font-size: 16px;
+  }
+
+  .feature-image {
+    height: 250px;
+  }
+
+  .cultural-quote .quote-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cultural-header h1 {
+    font-size: 32px;
+  }
+
+  .cultural-section {
+    padding: 25px;
+  }
+
+  .cultural-section .card-title {
+    font-size: 28px;
+  }
+
+  .feature-item {
+    padding-left: 25px;
+  }
+
+  .feature-item::before {
+    font-size: 20px;
+  }
+
+  .feature-image {
+    height: 200px;
+  }
+
+  .cultural-quote {
+    padding: 30px;
+    margin: 40px auto;
+  }
+
+  .cultural-quote .quote-text {
+    font-size: 20px;
+  }
+}

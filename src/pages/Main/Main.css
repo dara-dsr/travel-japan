@@ -1,0 +1,379 @@
+/* Шапка */
+header {
+  width: 100%;
+  height: 90vh;
+  min-height: 500px;
+  background-image: url('../../images/img/head.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  margin-bottom: 40px;
+}
+
+.home-content {
+  color: whitesmoke;
+  text-align: left;
+  z-index: 1;
+  padding: 64px;
+  width: 100%;
+  margin-bottom: 380px;
+}
+
+.home-content h1 {
+  font-size: 104px;
+  letter-spacing: 4.8px;
+  font-family: "Belepotan";
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Краткая информация */
+.dragon-back {
+  background-image: url(../../images/img/фоны/дракон.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+  padding: 60px 0;
+}
+
+.country-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  max-width: 2000px;
+  margin: 0 auto;
+  backdrop-filter: blur(5px);
+}
+
+.country-column {
+  flex: 1;
+  min-width: 150px;
+  max-width: 300px;
+  background: rgba(78, 30, 126, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.country-head {
+  font-family: "Belepotan";
+  font-weight: 700;
+  font-size: 20px;
+  color: #3b175f;
+  opacity: .8;
+  margin-top: 15px;
+  display: block;
+}
+
+.country-text {
+  font-family: "FliegeMono-ExtraLight";
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 1.4;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.country-flag {
+  width: 100px;
+  height: auto;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: block;
+}
+
+.cities-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.city-item {
+  margin-bottom: 2px;
+  display: block;
+}
+
+.city-item .country-text {
+  display: block;
+  font-family: "FliegeMono-ExtraLight";
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* Информация о Японии */
+.section-info {
+  padding: 40px 20px;
+}
+
+.japan-banner-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.japan-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.japan-content {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.japan-zag {
+  font-size: 48px;
+  color: white;
+  font-family: "Belepotan";
+  margin-bottom: 20px;
+}
+
+.japan-text {
+  font-size: 20.8px;
+  color: #ffffff;
+  font-family: "FliegeMono-ExtraLight";
+  line-height: 1.6;
+}
+
+/* Острова */
+.islands {
+  padding: 20px 20px;
+}
+
+.islands h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Belepotan";
+}
+
+.container-islands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.island-card {
+  flex: 1;
+  min-width: 400px;
+  max-width: 350px;
+  height: 250px;
+  background-color: #4e1e7e;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.island-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.island-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  text-decoration: none;
+  color: white;
+}
+
+.island-card h2 {
+  color: #ffb2cc;
+  text-align: center;
+  font-family: "Belepotan";
+  font-size: 28.8px;
+  margin-bottom: 15px;
+}
+
+.island-card p {
+  color: #e0e0e0;
+  text-align: center;
+  font-family: "FliegeMono-ExtraLight";
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Особенности */
+.features {
+  padding: 60px 20px;
+  position: relative;
+  min-height: 800px;
+  background: url('../../images/img/фоны/сакура.png') no-repeat bottom center;
+  background-size: cover;
+}
+
+.features h1 {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Belepotan";
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 820px;
+  background: rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-family: "FliegeMono-ExtraLight";
+  color: white;
+  font-size: 22.4px;
+  text-align: center;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media screen and (max-width: 768px) {
+  .home-content h1 {
+    font-size: 40px;
+    letter-spacing: 3.2px;
+  }
+
+  .country-column {
+    min-width: 100%;
+  }
+
+  .japan-zag {
+    font-size: 35.2px;
+  }
+
+  .japan-text {
+    font-size: 17.6px;
+  }
+
+  .island-card {
+    min-width: 100%;
+  }
+
+  .feature-card {
+    min-width: 100%;
+  }
+
+  .feature-card img {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    height: 70%;
+    min-height: 400px;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .japan-zag {
+    font-size: 28.8px;
+  }
+
+  .japan-text {
+    font-size: 16px;
+  }
+
+  .islands h1,
+  .features h1 {
+    font-size: 28.8px;
+  }
+
+  .country-head,
+  .country-text {
+    font-size: 14px;
+  }
+
+  .country-flag {
+    width: 80px;
+  }
+}
+
+/* Улучшения для планшетов */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .country-column {
+    min-width: 45%;
+  }
+
+  .island-card {
+    min-width: 45%;
+  }
+
+  .feature-card {
+    min-width: 45%;
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.country-column,
+.island-card,
+.feature-card {
+  animation: fadeIn 0.5s ease-out;
+}

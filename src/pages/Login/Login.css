@@ -1,0 +1,198 @@
+.login-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background: url('../../images/img/фоны/сакура.png') no-repeat bottom center;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-header h1 {
+  font-family: "Belepotan";
+  color: white;
+  font-size: 56px;
+  margin-bottom: 10px;
+}
+
+.header-line {
+  width: 120px;
+  height: 4px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.login-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  box-shadow: 0 10px 40px rgba(78, 30, 126, 0.2);
+}
+
+.login-form-container {
+  flex: 1.2;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  color: #4e1e7e;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-family: "FliegeMono-ExtraLight";
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "FliegeMono-ExtraLight";
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #AA96FF;
+}
+
+.login-options {
+  margin: 20px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #444;
+  font-family: "FliegeMono-ExtraLight";
+}
+
+.checkbox-label input {
+  width: 18px;
+  height: 18px;
+}
+
+.login-button {
+  background-color: #4e1e7e;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 17.6px;
+  font-family: "FliegeMono-ExtraLight";
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #3a165f;
+}
+
+.signup-promo {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f0f0ff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.signup-promo p {
+  color: #4e1e7e;
+  margin-bottom: 15px;
+}
+
+.signup-link {
+  background-color: #AA96FF;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "FliegeMono-ExtraLight";
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.signup-link:hover {
+  background-color: #8b7dff;
+}
+
+.notification-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f0ff;
+  border-radius: 10px;
+  border-left: 4px solid #AA96FF;
+}
+
+.notification-text h4 {
+  color: #4e1e7e;
+  font-family: "FliegeMono-ExtraLight";
+  margin-bottom: 10px;
+}
+
+.notification-text p {
+  color: #666;
+  font-size: 15.2px;
+  line-height: 1.5;
+}
+
+.login-illustration {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.illustration-content h3 {
+  color: #4e1e7e;
+  font-family: "Belepotan";
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.illustration-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.illustration-icon {
+  font-size: 64px;
+  color: #AA96FF;
+}
+
+@media (max-width: 900px) {
+  .login-form-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .login-header h1 {
+    font-size: 40px;
+  }
+}
