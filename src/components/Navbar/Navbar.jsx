@@ -154,7 +154,7 @@ const Navbar = () => {
                 <button 
                   className="auth-button" 
                   onClick={handleAuthClick}>
-                  <img src={authIcon} alt="Вход" className="auth-icon" />Войти / Регистрация
+                  <img src={accountIcon} alt="Вход" className="auth-icon" />Войти / Регистрация
                 </button>
               )}
             </>

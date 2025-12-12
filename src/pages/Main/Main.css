@@ -6,7 +6,7 @@ header {
   background-image: url('../../images/img/head.png');
   background-position: center;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;

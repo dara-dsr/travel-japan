@@ -255,6 +255,7 @@
 /* Миссия */
 .mission-text {
   position: relative;
+  color: #fff;
 }
 
 .mission-quote {

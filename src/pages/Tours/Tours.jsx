@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Tours.css';
 import fon from '../../images/img/japan-pattern.jpg';
 
@@ -10,7 +10,60 @@ import tour5 from '../../images/tour/Аниме и манга.jpg';
 import tour6 from '../../images/tour/Люкс-тур.jpg';
 
 const Tours = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
+
+  // Проверка авторизации при загрузке компонента
+  useEffect(() => {
+    checkAuthStatus();
+  }, []);
+
+  // Функция для проверки статуса авторизации
+  const checkAuthStatus = () => {
+    const token = localStorage.getItem('authToken');
+    setIsLoggedIn(!!token);
+  };
+
+  // Функция обработки клика на кнопку тура
+  const handleTourButtonClick = (tourTitle) => {
+    if (!isLoggedIn) {
+      // Перенаправление на страницу регистрации/входа
+      window.location.href = '/login'; // или '/register' в зависимости от вашей маршрутизации
+    } else {
+      // Показываем уведомление для авторизованного пользователя
+      setShowNotification(true);
+      
+      // Скрываем уведомление через 3 секунды
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+      
+      // Здесь можно добавить логику отправки данных о выбранном туре на сервер
+      console.log(`Заявка на тур: ${tourTitle}`);
+    }
+  };
+
+  // Функция обработки клика на кнопку контактов
+  const handleContactButtonClick = () => {
+    if (!isLoggedIn) {
+      // Перенаправление на страницу регистрации/входа
+      window.location.href = '/login'; // или '/register' в зависимости от вашей маршрутизации
+    } else {
+      // Показываем уведомление для авторизованного пользователя
+      setShowNotification(true);
+      
+      // Скрываем уведомление через 3 секунды
+      setTimeout(() => {
+        setShowNotification(false);
+      }, 3000);
+      
+      // Здесь можно добавить логику отправки заявки на сервер
+      console.log('Заявка на подбор тура');
+    }
+  };
+
   const tours = [
+    // ... (массив tours остается без изменений)
     {
       id: 1,
       title: "Классическая Япония",
@@ -75,6 +128,15 @@ const Tours = () => {
 
   return (
     <div className="tour-container">
+      {/* Уведомление для авторизованных пользователей */}
+      {showNotification && (
+        <div className="tour-notification">
+          <div className="notification-content">
+            <span>Спасибо! Мы свяжемся с вами в ближайшее время.</span>
+          </div>
+        </div>
+      )}
+
       {/* Герой-секция */}
       <section className="tour-hero">
         <div className="hero-background-tour">
@@ -135,8 +197,11 @@ const Tours = () => {
                     ))}
                   </ul>
                 </div>
-                <button className="tour-button">
-                  Подробнее о туре
+                <button 
+                  className="tour-button"
+                  onClick={() => handleTourButtonClick(tour.title)}
+                >
+                  {isLoggedIn ? 'Оставить заявку' : 'Подробнее о туре'}
                 </button>
               </div>
             </div>
@@ -212,7 +277,10 @@ const Tours = () => {
               <span className="contact-value">Пн-Пт 9:00-18:00</span>
             </div>
           </div>
-          <button className="contact-button">
+          <button 
+            className="contact-button"
+            onClick={handleContactButtonClick}
+          >
             Оставить заявку
           </button>
         </div>
@@ -221,4 +289,4 @@ const Tours = () => {
   )
 }
 
-export default Tours
+export default Tours;
