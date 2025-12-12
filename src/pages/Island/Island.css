@@ -1,4 +1,4 @@
-/* Island.css - Оптимизированная версия */
+
 :root {
   --primary-purple: #4e1e7e;
   --primary-pink: #ffb2cc;
@@ -169,11 +169,12 @@
 /* ===== КАРТОЧКИ ОСТРОВОВ ===== */
 
 .section-header h1 {
-  font-size: 3rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
   font-family: var(--font-title);
   color: white;
   margin-bottom: 1rem;
-  position: relative;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .section-header .line {
@@ -184,25 +185,28 @@
 }
 
 .main-islands-section {
-  padding: 5rem 2rem;
+  padding: clamp(2rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem);
 }
 
 .islands-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
   max-width: 1800px;
   margin: 0 auto;
 }
 
 .islands-card {
   background: var(--card-bg);
-  border-radius: 20px;
+  border-radius: clamp(15px, 3vw, 20px);
   overflow: hidden;
   transition: all 0.4s ease;
-  height: 550px;
+  min-height: clamp(300px, 40vh, 550px);
+  height: auto;
   position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
 .islands-card:hover {
@@ -213,21 +217,19 @@
 .islands-card img {
   width: 100%;
   border-radius: 10%;
-  height: 200px;
+  height: clamp(150px, 25vh, 200px);
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.islands-card:hover img {
-  transform: scale(1.1);
-}
-
 .islands-card a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  padding: 1.8rem;
+  padding: clamp(1rem, 2vw, 1.8rem);
   text-decoration: none;
   color: white;
+  flex-grow: 1;
 }
 
 .islands-card h2 {
@@ -239,11 +241,15 @@
 }
 
 .islands-card p {
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 2vw, 1rem);
   line-height: 1.6;
   font-family: var(--font-mono);
   color: var(--light-text);
   text-align: center;
+  flex-grow: 1;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ===== ПОПУЛЯРНЫЕ МЕСТА ===== */
@@ -535,6 +541,14 @@
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .islands-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .islands-card {
+    min-height: 350px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -561,8 +575,25 @@
     align-items: center;
   }
 
+  .section-header h1 {
+    font-size: 2.5rem;
+  }
+  
   .islands-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .islands-card {
+    min-height: 320px;
+  }
+  
+  .islands-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .islands-card p {
+    font-size: 0.9rem;
   }
 }
 
@@ -600,12 +631,42 @@
     font-size: 2.2rem;
   }
 
+  .main-islands-section {
+    padding: 3rem 1rem;
+  }
+  
+  .section-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
   .islands-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 500px;
   }
-
+  
   .islands-card {
-    height: 400px;
+    min-height: 280px;
+    height: auto;
+  }
+  
+  .islands-card a {
+    padding: 1.5rem;
+  }
+  
+  .islands-card img {
+    height: 160px;
+  }
+  
+  .islands-card h2 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  
+  .islands-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .carousel-container {
@@ -646,12 +707,43 @@
     font-size: 1.8rem;
   }
 
-  .islands-card {
-    height: 380px;
+  .main-islands-section {
+    padding: 2rem 0.5rem;
   }
-
+  
+  .section-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .section-header .line {
+    width: 80px;
+  }
+  
+  .islands-grid {
+    gap: 1rem;
+  }
+  
+  .islands-card {
+    min-height: 250px;
+    border-radius: 12px;
+  }
+  
+  .islands-card a {
+    padding: 1.2rem;
+  }
+  
+  .islands-card img {
+    height: 140px;
+  }
+  
   .islands-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+  }
+  
+  .islands-card p {
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
   .carousel-card {

@@ -154,14 +154,14 @@ header {
 
 /* Острова */
 .islands {
-  padding: 20px 20px;
+  padding: 40px 20px;
 }
 
 .islands h1 {
   text-align: center;
   color: white;
-  font-size: 40px;
-  margin-bottom: 20px;
+  font-size: clamp(28px, 5vw, 48px);
+  margin-bottom: 30px;
   font-family: "Belepotan";
 }
 
@@ -169,23 +169,24 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   max-width: 1800px;
   margin: 0 auto;
   padding: 20px;
 }
 
 .island-card {
-  flex: 1;
-  min-width: 400px;
+  flex: 1 1 300px;
   max-width: 350px;
-  height: 250px;
+  min-height: 250px;
   background-color: #4e1e7e;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .island-card:hover {
@@ -194,28 +195,37 @@ header {
 }
 
 .island-card a {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 25px;
+  padding: clamp(15px, 3vw, 25px);
   text-decoration: none;
   color: white;
+  flex-grow: 1;
 }
 
 .island-card h2 {
   color: #ffb2cc;
   text-align: center;
   font-family: "Belepotan";
-  font-size: 28.8px;
+  font-size: clamp(20px, 4vw, 32px);
   margin-bottom: 15px;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .island-card p {
   color: #e0e0e0;
   text-align: center;
   font-family: "FliegeMono-ExtraLight";
-  font-size: 16px;
+  font-size: clamp(14px, 2.5vw, 16px);
   line-height: 1.6;
+  flex-grow: 1;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Особенности */
@@ -298,8 +308,38 @@ header {
     font-size: 17.6px;
   }
 
+  .islands {
+    padding: 30px 15px;
+  }
+  
+  .islands h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .container-islands {
+    gap: 20px;
+    padding: 10px;
+  }
+  
   .island-card {
-    min-width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-height: 200px;
+  }
+  
+  .island-card a {
+    padding: 20px;
+  }
+  
+  .island-card h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  
+  .island-card p {
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   .feature-card {
@@ -329,7 +369,6 @@ header {
     font-size: 16px;
   }
 
-  .islands h1,
   .features h1 {
     font-size: 28.8px;
   }
@@ -342,6 +381,36 @@ header {
   .country-flag {
     width: 80px;
   }
+
+    .islands h1 {
+      font-size: 26px;
+    }
+  
+    .islands {
+      padding: 25px 10px;
+    }
+  
+    .container-islands {
+      gap: 15px;
+    }
+  
+    .island-card {
+      min-height: 180px;
+    }
+  
+    .island-card a {
+      padding: 15px;
+    }
+  
+    .island-card h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    .island-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
 }
 
 /* Улучшения для планшетов */
@@ -356,6 +425,19 @@ header {
 
   .feature-card {
     min-width: 45%;
+  }
+
+  .island-card {
+    flex: 1 1 calc(50% - 25px);
+    max-width: calc(50% - 25px);
+  }
+  
+  .island-card h2 {
+    font-size: 24px;
+  }
+  
+  .island-card p {
+    font-size: 15px;
   }
 }
 
