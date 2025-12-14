@@ -1,28 +1,28 @@
-import React from "react";
+import React, { lazy } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./AuthContext";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Main from "./pages/Main/Main";
-import Island from "./pages/Island/Island";
-import Features from "./pages/Features/Features";
-import Tours from "./pages/Tours/Tours";
-import About from "./pages/About/About";
-import Login from "./pages/Login/Login";
-import Registration from "./pages/Regitration/Registration";
-import Account from "./pages/Account/Account";
-import Honshu from "./pages/Honshu/Honshu";
-import Hokkaido from "./pages/Hokkaido/Hokkaido";
-import Kyushu from "./pages/Kyushu/Kyushu";
-import Shikoku from "./pages/Shikoku/Shikoku";
-import Tugoku from "./components/Tyugoku/Tugoku";
-import Tohoku from "./components/Tohoku/Tohoku";
-import Kanto from "./components/Kanto/Kanto";
-import Chubu from "./components/Chubu/Chubu";
-import Kansai from "./components/Kansai/Kansai";
 import NotFound from "./pages/404/NotFound";
 
+const Main = lazy(() => import("./pages/Main/Main"));
+const Island = lazy(() => import("./pages/Island/Island"));
+const Features = lazy(() => import("./pages/Features/Features"));
+const Tours = lazy(() => import("./pages/Tours/Tours"));
+const About = lazy(() => import("./pages/About/About"));
+const Login = lazy(() => import("./pages/Login/Login"));
+const Registration = lazy(() => import("./pages/Registration/Registration"));
+const Account = lazy(() => import("./pages/Account/Account"));
+const Honshu = lazy(() => import("./pages/Honshu/Honshu"));
+const Hokkaido = lazy(() => import("./pages/Hokkaido/Hokkaido"));
+const Kyushu = lazy(() => import("./pages/Kyushu/Kyushu"));
+const Shikoku = lazy(() => import("./pages/Shikoku/Shikoku"));
+const Tugoku = lazy(() => import("./components/Tyugoku/Tugoku"));
+const Tohoku = lazy(() => import("./components/Tohoku/Tohoku"));
+const Kanto = lazy(() => import("./components/Kanto/Kanto"));
+const Chubu = lazy(() => import("./components/Chubu/Chubu"));
+const Kansai = lazy(() => import("./components/Kansai/Kansai"));
 function App() {
   return (
     <AuthProvider>
