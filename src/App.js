@@ -12,7 +12,7 @@ const Features = lazy(() => import("./pages/Features/Features"));
 const Tours = lazy(() => import("./pages/Tours/Tours"));
 const About = lazy(() => import("./pages/About/About"));
 const Login = lazy(() => import("./pages/Login/Login"));
-const Registration = lazy(() => import("./pages/Registration/Registration"));
+const Registration = lazy(() => import("./pages/Regitration/Registration"));
 const Account = lazy(() => import("./pages/Account/Account"));
 const Honshu = lazy(() => import("./pages/Honshu/Honshu"));
 const Hokkaido = lazy(() => import("./pages/Hokkaido/Hokkaido"));
